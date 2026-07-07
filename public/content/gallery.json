@@ -2,11 +2,65 @@
   "_readme": "The Gallery page + the 'Recent work' row on Home. featuredId: the id of the portrait shown large on Home (must match an id below). Each piece: id (unique, no spaces), title (pet's name), category (Dogs / Cats / Ornaments / Studies), ratio (width ÷ height of the image), thumb + full (paths under /paintings/). To add a portrait see CONTENT.md. TODO(pre-launch): replace placeholder titles Scout/Marmalade/Blue/Cocoa with the real pet names.",
   "featuredId": "dog3",
   "pieces": [
-    { "id": "apollo", "title": "Apollo", "category": "Dogs", "ratio": 0.8407, "tint": "var(--violet)", "alt": "Expressive acrylic portrait of a dog named Apollo, painted in bold brushstrokes.", "thumb": "/paintings/apollo-thumb.webp", "full": "/paintings/apollo-full.webp" },
-    { "id": "rocky", "title": "Rocky", "category": "Dogs", "ratio": 0.7770, "tint": "var(--marigold)", "alt": "Expressive acrylic portrait of a dog named Rocky, painted in bold brushstrokes.", "thumb": "/paintings/rocky-thumb.webp", "full": "/paintings/rocky-full.webp" },
-    { "id": "dog1", "title": "Scout", "category": "Dogs", "ratio": 0.7692, "tint": "var(--cobalt)", "alt": "Expressive acrylic portrait of a dog named Scout, painted in bold brushstrokes.", "thumb": "/paintings/dog1-thumb.webp", "full": "/paintings/dog1-full.webp" },
-    { "id": "dog2", "title": "Marmalade", "category": "Cats", "ratio": 0.9022, "tint": "var(--coral)", "alt": "Expressive acrylic portrait of a cat named Marmalade, painted in bold brushstrokes.", "thumb": "/paintings/dog2-thumb.webp", "full": "/paintings/dog2-full.webp" },
-    { "id": "dog3", "title": "Blue", "category": "Dogs", "ratio": 0.8022, "tint": "var(--teal)", "alt": "Expressive acrylic portrait of a dog named Blue, painted in bold brushstrokes.", "thumb": "/paintings/dog3-thumb.webp", "full": "/paintings/dog3-full.webp" },
-    { "id": "dog4", "title": "Cocoa", "category": "Dogs", "ratio": 1.2098, "tint": "var(--marigold)", "alt": "Expressive acrylic portrait of a dog named Cocoa, painted in bold brushstrokes.", "thumb": "/paintings/dog4-thumb.webp", "full": "/paintings/dog4-full.webp" }
+    {
+      "id": "apollo",
+      "title": "Apollo",
+      "category": "Dogs",
+      "ratio": 0.8407,
+      "tint": "var(--violet)",
+      "alt": "Expressive acrylic portrait of a dog named Apollo, painted in bold brushstrokes.",
+      "thumb": "/paintings/apollo-thumb.webp",
+      "full": "/paintings/apollo-full.webp"
+    },
+    {
+      "id": "rocky",
+      "title": "Rocky",
+      "category": "Dogs",
+      "ratio": 0.777,
+      "tint": "var(--marigold)",
+      "alt": "Expressive acrylic portrait of a dog named Rocky, painted in bold brushstrokes.",
+      "thumb": "/paintings/rocky-thumb.webp",
+      "full": "/paintings/rocky-full.webp"
+    },
+    {
+      "id": "dog1",
+      "title": "Scout",
+      "category": "Dogs",
+      "ratio": 0.7692,
+      "tint": "var(--cobalt)",
+      "alt": "Expressive acrylic portrait of a dog named Scout, painted in bold brushstrokes.",
+      "thumb": "/paintings/dog1-thumb.webp",
+      "full": "/paintings/dog1-full.webp"
+    },
+    {
+      "id": "dog2",
+      "title": "Marmalade",
+      "category": "Cats",
+      "ratio": 0.9022,
+      "tint": "var(--coral)",
+      "alt": "Expressive acrylic portrait of a cat named Marmalade, painted in bold brushstrokes.",
+      "thumb": "/paintings/dog2-thumb.webp",
+      "full": "/paintings/dog2-full.webp"
+    },
+    {
+      "id": "dog3",
+      "title": "Blue",
+      "category": "Dogs",
+      "ratio": 0.8022,
+      "tint": "var(--teal)",
+      "alt": "Expressive acrylic portrait of a dog named Blue, painted in bold brushstrokes.",
+      "thumb": "/paintings/dog3-thumb.webp",
+      "full": "/paintings/dog3-full.webp"
+    },
+    {
+      "id": "dog4",
+      "title": "Cocoa",
+      "category": "Dogs",
+      "ratio": 1.2098,
+      "tint": "var(--marigold)",
+      "alt": "Expressive acrylic portrait of a dog named Cocoa, painted in bold brushstrokes.",
+      "thumb": "/paintings/dog4-thumb.webp",
+      "full": "/paintings/dog4-full.webp"
+    }
   ]
 }
