@@ -3,8 +3,17 @@
   "commissionsOpen": true,
   "listingDescription": "Celebrate your beloved pet with a one-of-a-kind hand-painted acrylic portrait! Each portrait is painted by me with vibrant acrylic paints in my signature expressive style, capturing your pet's unique personality and charm. Whether your furry friend is playful, goofy, serious, or full of attitude, I'll create a custom keepsake you'll treasure for years.",
   "howItWorks": [
-    { "step": "Send your photos", "detail": "Order on Etsy and message me a clear, well-lit photo of your pet. A few options are welcome." },
-    { "step": "I paint it by hand", "detail": "Each portrait is painted in acrylic on watercolor paper, one at a time, usually within 3-5 days." },
-    { "step": "It ships to you", "detail": "Your finished 8×10 portrait ships from Pompano Beach, FL, ready to frame." }
+    {
+      "step": "Send your photos",
+      "detail": "Order on Etsy and message me a clear, well-lit photo of your pet. A few options are welcome."
+    },
+    {
+      "step": "I paint it by hand",
+      "detail": "Each portrait is painted in acrylic on watercolor paper, one at a time, usually within 3-5 days."
+    },
+    {
+      "step": "It ships to you",
+      "detail": "Your finished 8×10 portrait ships from Pompano Beach, FL, ready to frame."
+    }
   ]
 }
