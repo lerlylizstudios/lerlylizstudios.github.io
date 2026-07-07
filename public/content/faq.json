@@ -1,0 +1,25 @@
+{
+  "_readme": "The FAQ page. Each item in 'faqs' is one question (q) and its answer (a). Add, remove, or reorder freely — keep each entry as a { \"q\": \"...\", \"a\": \"...\" } pair.",
+  "faqs": [
+    {
+      "q": "How long until I get my portrait?",
+      "a": "Most portraits are painted and shipped within 3-5 days. I'll confirm timing with you after you order."
+    },
+    {
+      "q": "What photo should I send?",
+      "a": "A clear, well-lit photo of your pet's face works best — natural light, looking toward the camera. Send a few and I'll pick the strongest, or tell me your favorite."
+    },
+    {
+      "q": "How big is it and what's it painted on?",
+      "a": "Every portrait is 8×10 inches, hand-painted in acrylic on watercolor paper. It arrives unframed and ready to frame."
+    },
+    {
+      "q": "Where does it ship from, and how?",
+      "a": "Each portrait ships from Pompano Beach, FL. Payment, and shipping are all handled through Etsy."
+    },
+    {
+      "q": "Can I ask for a specific background color?",
+      "a": "Yes — leave a note on your Etsy order and I'll work it into the piece."
+    }
+  ]
+}

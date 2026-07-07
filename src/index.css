@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Design tokens (mirror tailwind.config.js for raw-CSS use) ---- */
+:root {
+  --canvas: #fbf6ec;
+  --ink: #241e1b;
+  --coral: #ff5a3c;
+  --marigold: #ffb020;
+  --teal: #10a594;
+  --cobalt: #3355ff;
+  --fuchsia: #e63c8b;
+  --violet: #7a45e0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* The off-canvas drawer sits one width past the right edge; clip keeps it
+       from creating a horizontal scroll while preserving sticky positioning. */
+    overflow-x: clip;
+  }
+  body {
+    @apply bg-canvas text-ink font-body antialiased;
+    font-feature-settings: "ss01", "cv05";
+  }
+  ::selection {
+    background: var(--coral);
+    color: #fff;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  /* ---- Buttons ---- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-body font-semibold
+           px-6 py-3 text-[0.95rem] leading-none transition-all duration-200
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+           focus-visible:ring-ink focus-visible:ring-offset-canvas;
+  }
+  .btn-primary {
+    @apply btn bg-coral text-white shadow-frame hover:bg-coral-deep hover:-translate-y-0.5
+           active:translate-y-0;
+  }
+  .btn-ink {
+    @apply btn bg-ink text-canvas hover:bg-black hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-ink ring-1 ring-inset ring-ink/25 hover:ring-ink/60
+           hover:bg-ink/[0.03];
+  }
+  .btn:disabled {
+    @apply opacity-50 pointer-events-none;
+  }
+
+  /* ---- Eyebrow / label ---- */
+  .eyebrow {
+    @apply font-body font-semibold uppercase text-eyebrow text-ink-soft;
+  }
+
+  /* ---- Calm frame (the "clarity") ---- */
+  .frame {
+    @apply rounded-frame bg-canvas ring-1 ring-ink/10 shadow-frame;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Painterly underline that sweeps under a heading. */
+  .brush-underline {
+    background-image: linear-gradient(var(--coral), var(--coral));
+    background-repeat: no-repeat;
+    background-position: 0 88%;
+    background-size: 100% 0.28em;
+    padding-bottom: 0.06em;
+  }
+}
+
+/* ---- Scroll paint-in: no IntersectionObserver, pure CSS scroll timeline. ----
+   Unsupported browsers + reduced-motion users get the final painted state. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .paint-in {
+      animation: paint-in linear both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 32%;
+    }
+    .paint-in-slow {
+      animation-range: entry 0% cover 45%;
+    }
+  }
+}
+
+@keyframes paint-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.985);
+    filter: blur(5px);
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    clip-path: inset(0 0 0 0);
+  }
+}
