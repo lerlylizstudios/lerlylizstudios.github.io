@@ -18,7 +18,7 @@ const FILES = {
   faq: "public/content/faq.json",
 };
 
-const CATEGORIES = ["Dogs", "Cats", "Ornaments", "Studies"] as const;
+const CATEGORIES = ["Dogs", "Cats", "Artwork", "Studies"] as const;
 const TINTS = [
   "var(--violet)",
   "var(--marigold)",
