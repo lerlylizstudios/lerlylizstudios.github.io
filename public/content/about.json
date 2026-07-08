@@ -1,6 +1,6 @@
 {
   "_readme": "The About page. statement: your artist bio paragraph. photo: paste an image path here (e.g. /paintings/lerly-thumb.webp) to replace the placeholder; leave \"\" to keep it. materials: the small line under the photo.",
   "statement": "I create vibrant, expressive pet portraits using bold brushstrokes and unexpected color to capture not just how a pet looks, but who they are. Every portrait is hand-painted in acrylic with rich texture, movement, and personality.",
-  "photo": "",
+  "photo": "/paintings/about-photo.webp",
   "materials": "Acrylic on watercolor paper · 8×10 inches"
 }
