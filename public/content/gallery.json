@@ -133,14 +133,24 @@
       "alt": "A portrait of Joy, Cats"
     },
     {
+      "id": "the-gaurdians",
+      "title": "The Gaurdians",
+      "category": "Artwork",
+      "ratio": 0.8112,
+      "tint": "var(--teal)",
+      "thumb": "/paintings/the-gaurdians-thumb.webp",
+      "full": "/paintings/the-gaurdians-full.webp",
+      "alt": "A portrait of The Gaurdians, Artwork"
+    },
+    {
       "id": "kaci",
       "title": "Kaci",
-      "category": "Cats",
+      "category": "Artwork",
       "ratio": 0.7955,
       "tint": "var(--marigold)",
       "thumb": "/paintings/kaci-thumb.webp",
       "full": "/paintings/kaci-full.webp",
-      "alt": "A portrait of Kaci, Cats"
+      "alt": "A portrait of Kaci, Artwork"
     },
     {
       "id": "lola",
@@ -175,22 +185,12 @@
     {
       "id": "stitch",
       "title": "Stitch",
-      "category": "Dogs",
+      "category": "Artwork",
       "ratio": 0.7762,
       "tint": "var(--fuchsia)",
       "thumb": "/paintings/stitch-thumb.webp",
       "full": "/paintings/stitch-full.webp",
-      "alt": "A portrait of Stitch, Dogs"
-    },
-    {
-      "id": "the-gaurdians",
-      "title": "The Gaurdians",
-      "category": "Artwork",
-      "ratio": 0.8112,
-      "tint": "var(--teal)",
-      "thumb": "/paintings/the-gaurdians-thumb.webp",
-      "full": "/paintings/the-gaurdians-full.webp",
-      "alt": "A portrait of The Gaurdians, Artwork"
+      "alt": "A portrait of Stitch, Artwork"
     },
     {
       "id": "trig",
