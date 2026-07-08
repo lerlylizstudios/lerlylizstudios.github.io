@@ -40,12 +40,19 @@ export function GalleryGrid({
         })}
       </div>
 
-      {/* CSS-columns masonry — order-independent, keeps true aspect ratios. */}
-      <div className="[column-fill:_balance] gap-5 columns-2 sm:columns-3 lg:columns-4">
-        {shown.map((p) => (
-          <GalleryCard key={p.id} piece={p} onOpen={onOpen} />
-        ))}
-      </div>
+      {/* CSS-columns masonry — order-independent, keeps true aspect ratios.
+          Empty category → a friendly "coming soon" instead of a blank void. */}
+      {shown.length === 0 ? (
+        <div className="py-12 text-center text-ink-faint">
+          <p>More {active.toLowerCase()} coming soon.</p>
+        </div>
+      ) : (
+        <div className="[column-fill:_balance] gap-5 columns-2 sm:columns-3 lg:columns-4">
+          {shown.map((p) => (
+            <GalleryCard key={p.id} piece={p} onOpen={onOpen} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

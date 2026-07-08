@@ -64,7 +64,7 @@ export function Home({ nav, commissionsOpen }: { nav: (p: Page) => void; commiss
       {/* Gallery teaser */}
       {teaser.length > 0 && (
         <section className="py-14">
-          <div className="mb-6 flex items-end justify-between gap-4">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
             <h2 className="text-h2">Recent work</h2>
             <button className="btn-ghost" onClick={() => nav("gallery")}>
               See all
@@ -86,7 +86,7 @@ export function Home({ nav, commissionsOpen }: { nav: (p: Page) => void; commiss
           href={SITE.instagram}
           target="_blank"
           rel="noreferrer"
-          className="frame flex items-center justify-between gap-4 px-6 py-5 hover:shadow-lift"
+          className="frame flex flex-wrap items-center justify-between gap-4 px-6 py-5 hover:shadow-lift"
         >
           <span className="font-display text-h3">See more on Instagram</span>
           <span className="inline-flex items-center gap-2 text-sm font-semibold text-coral-deep">

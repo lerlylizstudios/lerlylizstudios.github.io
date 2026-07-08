@@ -8,7 +8,7 @@ export function SiteHeader({ nav, onMenuOpen }: { nav: (p: Page) => void; onMenu
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-6">
         <button
           onClick={() => nav("home")}
-          className="font-display text-xl font-semibold tracking-tight text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+          className="whitespace-nowrap font-display text-lg font-semibold tracking-tight text-ink sm:text-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
         >
           Lerly Liz Studios
         </button>
@@ -16,7 +16,7 @@ export function SiteHeader({ nav, onMenuOpen }: { nav: (p: Page) => void; onMenu
           onClick={onMenuOpen}
           aria-label="Open menu"
           aria-haspopup="dialog"
-          className="-mr-2 inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold text-ink-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink"
+          className="-mr-2 inline-flex shrink-0 items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold text-ink-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
             <path d="M4 7h16M4 12h16M4 17h16" />
