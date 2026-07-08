@@ -26,7 +26,11 @@ export function useData<T>(path: string, fallback: T): T {
     // URL unique per release — a guaranteed cache miss on every deploy, but
     // still cacheable within one release. `no-cache` forces revalidation as a
     // second line of defense against the browser's HTTP cache.
-    const url = `${path}?v=${__BUILD_ID__}`;
+    // __BUILD_ID__ is injected by Vite's `define` at build time; guard against
+    // it being undefined (e.g. tests, or any runtime without the define) so a
+    // missing global can never crash the fetch.
+    const version = typeof __BUILD_ID__ !== "undefined" ? __BUILD_ID__ : Date.now();
+    const url = `${path}?v=${version}`;
     fetch(url, { cache: "no-cache" })
       .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
       .then((d) => alive && setData(d as T))
