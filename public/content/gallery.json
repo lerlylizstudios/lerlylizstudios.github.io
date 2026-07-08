@@ -1,5 +1,5 @@
 {
-  "_readme": "The Gallery page + the 'Recent work' row on Home. featuredId: the id of the portrait shown large on Home (must match an id below). Each piece: id (unique, no spaces), title (pet's name), category (Dogs / Cats / Ornaments / Studies), ratio (width ÷ height of the image), thumb + full (paths under /paintings/). To add a portrait see CONTENT.md. TODO(pre-launch): replace placeholder titles Scout/Marmalade/Blue/Cocoa with the real pet names.",
+  "_readme": "The Gallery page + the 'Recent work' row on Home. featuredId: the id of the portrait shown large on Home (must match an id below). Each piece: id (unique, no spaces), title (pet's name), category (Dogs / Cats / Artwork / Studies), ratio (width ÷ height of the image), thumb + full (paths under /paintings/). To add a portrait see CONTENT.md. TODO(pre-launch): replace placeholder titles Scout/Marmalade/Blue/Cocoa with the real pet names.",
   "featuredId": "dog3",
   "pieces": [
     {
@@ -61,6 +61,156 @@
       "alt": "Expressive acrylic portrait of a dog named Cocoa, painted in bold brushstrokes.",
       "thumb": "/paintings/dog4-thumb.webp",
       "full": "/paintings/dog4-full.webp"
+    },
+    {
+      "id": "adora",
+      "title": "Adora",
+      "category": "Dogs",
+      "ratio": 0.772,
+      "tint": "var(--fuchsia)",
+      "thumb": "/paintings/adora-thumb.webp",
+      "full": "/paintings/adora-full.webp",
+      "alt": "A portrait of Adora, Dogs"
+    },
+    {
+      "id": "black",
+      "title": "Black",
+      "category": "Cats",
+      "ratio": 0.8137,
+      "tint": "var(--teal)",
+      "thumb": "/paintings/black-thumb.webp",
+      "full": "/paintings/black-full.webp",
+      "alt": "A portrait of Black, Cats"
+    },
+    {
+      "id": "bo",
+      "title": "Bo",
+      "category": "Dogs",
+      "ratio": 0.8013,
+      "tint": "var(--marigold)",
+      "thumb": "/paintings/bo-thumb.webp",
+      "full": "/paintings/bo-full.webp",
+      "alt": "A portrait of Bo, Dogs"
+    },
+    {
+      "id": "charlie",
+      "title": "Charlie",
+      "category": "Dogs",
+      "ratio": 1.0892,
+      "tint": "var(--cobalt)",
+      "thumb": "/paintings/charlie-thumb.webp",
+      "full": "/paintings/charlie-full.webp",
+      "alt": "A portrait of Charlie, Dogs"
+    },
+    {
+      "id": "duma",
+      "title": "Duma",
+      "category": "Dogs",
+      "ratio": 0.8261,
+      "tint": "var(--violet)",
+      "thumb": "/paintings/duma-thumb.webp",
+      "full": "/paintings/duma-full.webp",
+      "alt": "A portrait of Duma, Dogs"
+    },
+    {
+      "id": "flower-apollo",
+      "title": "Flower Apollo",
+      "category": "Dogs",
+      "ratio": 0.7473,
+      "tint": "var(--coral)",
+      "thumb": "/paintings/flower-apollo-thumb.webp",
+      "full": "/paintings/flower-apollo-full.webp",
+      "alt": "A portrait of Flower Apollo, Dogs"
+    },
+    {
+      "id": "halle",
+      "title": "Halle",
+      "category": "Cats",
+      "ratio": 0.9384,
+      "tint": "var(--fuchsia)",
+      "thumb": "/paintings/halle-thumb.webp",
+      "full": "/paintings/halle-full.webp",
+      "alt": "A portrait of Halle, Cats"
+    },
+    {
+      "id": "joy",
+      "title": "Joy",
+      "category": "Cats",
+      "ratio": 0.7992,
+      "tint": "var(--teal)",
+      "thumb": "/paintings/joy-thumb.webp",
+      "full": "/paintings/joy-full.webp",
+      "alt": "A portrait of Joy, Cats"
+    },
+    {
+      "id": "kaci",
+      "title": "Kaci",
+      "category": "Cats",
+      "ratio": 0.7955,
+      "tint": "var(--marigold)",
+      "thumb": "/paintings/kaci-thumb.webp",
+      "full": "/paintings/kaci-full.webp",
+      "alt": "A portrait of Kaci, Cats"
+    },
+    {
+      "id": "lola",
+      "title": "Lola",
+      "category": "Cats",
+      "ratio": 0.8497,
+      "tint": "var(--cobalt)",
+      "thumb": "/paintings/lola-thumb.webp",
+      "full": "/paintings/lola-full.webp",
+      "alt": "A portrait of Lola, Cats"
+    },
+    {
+      "id": "mochi",
+      "title": "Mochi",
+      "category": "Cats",
+      "ratio": 0.8359,
+      "tint": "var(--violet)",
+      "thumb": "/paintings/mochi-thumb.webp",
+      "full": "/paintings/mochi-full.webp",
+      "alt": "A portrait of Mochi, Cats"
+    },
+    {
+      "id": "snoopy",
+      "title": "Snoopy",
+      "category": "Dogs",
+      "ratio": 0.8798,
+      "tint": "var(--coral)",
+      "thumb": "/paintings/snoopy-thumb.webp",
+      "full": "/paintings/snoopy-full.webp",
+      "alt": "A portrait of Snoopy, Dogs"
+    },
+    {
+      "id": "stitch",
+      "title": "Stitch",
+      "category": "Dogs",
+      "ratio": 0.7762,
+      "tint": "var(--fuchsia)",
+      "thumb": "/paintings/stitch-thumb.webp",
+      "full": "/paintings/stitch-full.webp",
+      "alt": "A portrait of Stitch, Dogs"
+    },
+    {
+      "id": "the-gaurdians",
+      "title": "The Gaurdians",
+      "category": "Artwork",
+      "ratio": 0.8112,
+      "tint": "var(--teal)",
+      "thumb": "/paintings/the-gaurdians-thumb.webp",
+      "full": "/paintings/the-gaurdians-full.webp",
+      "alt": "A portrait of The Gaurdians, Artwork"
+    },
+    {
+      "id": "trig",
+      "title": "Trig",
+      "category": "Dogs",
+      "ratio": 0.7957,
+      "tint": "var(--marigold)",
+      "thumb": "/paintings/trig-thumb.webp",
+      "full": "/paintings/trig-full.webp",
+      "alt": "A portrait of Trig, Dogs"
     }
   ]
 }
