@@ -1,4 +1,4 @@
-// Sticky top bar: brand logo (→ home) + a hamburger that opens the drawer.
+// Sticky top bar: brand wordmark (→ home) + a hamburger that opens the drawer.
 // Mobile-first; the drawer holds the links at every size (mirrors the reference).
 import type { Page } from "../nav";
 
@@ -10,11 +10,7 @@ export function SiteHeader({ nav, onMenuOpen }: { nav: (p: Page) => void; onMenu
           onClick={() => nav("home")}
           className="font-display text-xl font-semibold tracking-tight text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
         >
-          <img
-            src="/logo.png"
-            alt="Lerly Liz Studios home"
-            className="h-9 w-auto object-contain sm:h-10 -my-1"
-          />
+          Lerly Liz Studios
         </button>
         <button
           onClick={onMenuOpen}
