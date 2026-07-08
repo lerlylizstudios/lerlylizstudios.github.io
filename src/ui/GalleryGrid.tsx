@@ -5,7 +5,7 @@
 import { useState } from "react";
 import { GalleryCard, type Piece } from "./GalleryCard";
 
-const CATEGORIES = ["All", "Dogs", "Cats", "Artwork", "Studies"] as const;
+const CATEGORIES = ["All", "Dogs", "Cats", "Artwork", "Ornaments"] as const;
 type Category = (typeof CATEGORIES)[number];
 
 export function GalleryGrid({

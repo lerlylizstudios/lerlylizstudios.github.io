@@ -19,7 +19,7 @@ const SAMPLE_PIECES: Piece[] = [
   { id: "apollo", title: "Apollo", category: "Dogs", ratio: 0.84, tint: "var(--violet)", thumb: "/paintings/apollo-thumb.webp", full: "/paintings/apollo-full.webp" },
   { id: "dog2", title: "Marmalade", category: "Cats", ratio: 0.9, tint: "var(--coral)", thumb: "/paintings/dog2-thumb.webp", full: "/paintings/dog2-full.webp" },
   { id: "dog3", title: "Blue", category: "Dogs", ratio: 0.8, tint: "var(--teal)", thumb: "/paintings/dog3-thumb.webp", full: "/paintings/dog3-full.webp" },
-  { id: "sample-placeholder", title: "Placeholder", category: "Studies", ratio: 1, tint: "var(--fuchsia)" },
+  { id: "sample-placeholder", title: "Placeholder", category: "Ornaments", ratio: 1, tint: "var(--fuchsia)" },
 ];
 
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
