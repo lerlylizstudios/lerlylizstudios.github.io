@@ -3,6 +3,7 @@
 // Portfolio only: no price or sold state. Reduced-motion users get no transition.
 import { useEffect, useRef, useState } from "react";
 import { useModal } from "../lib/useModal";
+import { SITE } from "../lib/site";
 import { PieceVisual, type Piece } from "./GalleryCard";
 
 export function Lightbox({
@@ -75,10 +76,11 @@ export function Lightbox({
       {/* Stage */}
       <div className="flex min-h-0 flex-1 items-center justify-center gap-2 px-2 sm:px-4">
         <NavArrow dir="prev" onClick={() => go(-1)} />
-        <div className="flex max-h-full min-w-0 flex-col items-center">
+        <figure className="flex max-h-full min-w-0 flex-col items-center">
+          {/* Capped at 800px tall so full images (1600px tall = 2×) stay sharp. */}
           <div
-            className="max-h-[68vh] overflow-hidden rounded-[3px] bg-canvas shadow-lift"
-            style={{ aspectRatio: String(piece.ratio), maxWidth: `min(92vw, calc(68vh * ${piece.ratio}))` }}
+            className="max-h-[min(68vh,800px)] overflow-hidden rounded-[3px] bg-canvas shadow-lift"
+            style={{ aspectRatio: String(piece.ratio), maxWidth: `min(92vw, calc(min(68vh, 800px) * ${piece.ratio}))` }}
           >
             <PieceVisual piece={piece} size="full" />
           </div>
@@ -86,14 +88,16 @@ export function Lightbox({
             <span className="font-display text-h3">{piece.title}</span>
             <span className="ml-2 text-sm text-canvas/60">{piece.category}</span>
           </figcaption>
-        </div>
+        </figure>
         <NavArrow dir="next" onClick={() => go(1)} />
       </div>
 
-      {/* Order CTA */}
+      {/* Order CTA — ornaments start at a different price than paintings. */}
       <div className="flex justify-center px-4 pb-6 pt-3">
         <button className="btn-primary" onClick={onOrder}>
-          Order a portrait like this — $35
+          {piece.category === "Ornaments"
+            ? `Order an ornament like this — from ${SITE.ornamentPrice}`
+            : `Order a portrait like this — from ${SITE.price}`}
         </button>
       </div>
     </div>

@@ -3,6 +3,66 @@
   "featuredId": "dog3",
   "pieces": [
     {
+      "id": "twin-cats",
+      "title": "Twins",
+      "category": "Cats",
+      "ratio": 0.75,
+      "tint": "var(--fuchsia)",
+      "alt": "Hand-painted acrylic portrait of two tabby kittens with bright green eyes, side by side on a gray background flecked with hot pink, held up in the artist's hand.",
+      "thumb": "/paintings/twin-cats-portrait-thumb.jpg",
+      "full": "/paintings/twin-cats-portrait-full.jpg"
+    },
+    {
+      "id": "pumpkin-stitch",
+      "title": "Pumpkin Stitch",
+      "category": "Dogs",
+      "ratio": 0.7002,
+      "tint": "var(--marigold)",
+      "alt": "Hand-painted acrylic portrait of a black French bulldog in a pumpkin costume with a green stem hat, on a blue background with red-orange brushstrokes.",
+      "thumb": "/paintings/pumpkin-stitch-portrait-thumb.jpg",
+      "full": "/paintings/pumpkin-stitch-portrait-full.jpg"
+    },
+    {
+      "id": "franky",
+      "title": "Franky",
+      "category": "Dogs",
+      "ratio": 0.75,
+      "tint": "var(--teal)",
+      "alt": "Hand-painted acrylic portrait of a small white dog with black ears dressed as Frankenstein's monster, with a green face, black flat-top hair, neck bolts, and stitches, on a hot pink background.",
+      "thumb": "/paintings/franky-frankenstein-portrait-thumb.jpg",
+      "full": "/paintings/franky-frankenstein-portrait-full.jpg"
+    },
+    {
+      "id": "luna",
+      "title": "Luna",
+      "category": "Cats",
+      "ratio": 0.762,
+      "tint": "var(--cobalt)",
+      "alt": "Hand-painted acrylic portrait of a green-eyed tabby cat lying on a blue cushion with its paws over the edge, wearing a blue evil-eye charm, on a gray and pink background.",
+      "thumb": "/paintings/luna-tabby-cat-portrait-thumb.jpg",
+      "full": "/paintings/luna-tabby-cat-portrait-full.jpg"
+    },
+    {
+      "id": "boey-ornaments",
+      "title": "Boey",
+      "category": "Ornaments",
+      "ratio": 1.4859,
+      "tint": "var(--cobalt)",
+      "alt": "Two hand-painted round wood-slice ornaments on red ribbons: a portrait of a tan-and-white dog with a pink nose and green collar on a blue background, and a dotted paw print with snowflakes and the name “Boey” over 2026.",
+      "thumb": "/paintings/pet-portrait-ornament.jpg",
+      "full": "/paintings/pet-portrait-ornament-full.jpg"
+    },
+    {
+      "id": "rocky-ornament",
+      "title": "Rocky",
+      "category": "Ornaments",
+      "ratio": 1,
+      "tint": "var(--fuchsia)",
+      "alt": "Two hand-painted round wood ornaments on twine loops: a rainbow-dotted paw print with the name “Rocky” on hot pink, and “2026” in white on green.",
+      "thumb": "/paintings/paw-print-name-ornament.jpg",
+      "full": "/paintings/paw-print-name-ornament-full.jpg"
+    },
+    {
       "id": "rocky",
       "title": "Rocky",
       "category": "Dogs",

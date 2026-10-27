@@ -10,6 +10,7 @@ import { EdgeBleed } from "../art/EdgeBleed";
 import { PaintIn } from "../art/PaintIn";
 import { CommissionBadge } from "../ui/CommissionBadge";
 import { OrderModule } from "../ui/OrderModule";
+import { SITE } from "../lib/site";
 import { GalleryGrid } from "../ui/GalleryGrid";
 import type { Piece } from "../ui/GalleryCard";
 
@@ -178,7 +179,7 @@ export default function StyleGuide() {
         {/* ---- Buttons + badge ---- */}
         <Section id="buttons" title="Buttons & commission badge">
           <div className="flex flex-wrap items-center gap-3">
-            <button className="btn-primary">Order on Etsy — $35</button>
+            <button className="btn-primary">Order on Etsy — {SITE.price}</button>
             <button className="btn-ink">Join the waitlist</button>
             <button className="btn-ghost">Visit the shop</button>
             <button className="btn-primary" disabled>Disabled</button>

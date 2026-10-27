@@ -25,18 +25,28 @@ const EDGE =
   "0 2px 3px rgba(120,90,60,.10), 0 16px 30px -18px rgba(120,80,50,.45), " +
   "inset 0 0 0 1px rgba(36,30,27,.16), inset 0 0 0 2px rgba(255,255,255,.16)";
 
+// Thumbs are generated 715px wide (2× the widest tile, the Home "Recent work"
+// column at ~357px). The frame already fixes the tile's aspect ratio, so the
+// width/height attributes just mirror it from `ratio` (works for CMS uploads).
+const THUMB_W = 715;
+
 /** The painting surface: real image (thumb or full) or the painterly stand-in. */
 export function PieceVisual({ piece, size = "thumb" }: { piece: Piece; size?: "thumb" | "full" }) {
   const src = size === "full" ? piece.full ?? piece.thumb : piece.thumb;
   if (src) {
     return (
-      <img
-        src={src}
-        alt={piece.alt || `${piece.title} — ${piece.category} portrait`}
-        loading={size === "thumb" ? "lazy" : "eager"}
-        decoding="async"
-        className="h-full w-full object-cover"
-      />
+      <>
+        {/* Source: original artwork by Lerly Liz Studios */}
+        <img
+          src={src}
+          alt={piece.alt || `${piece.title} — ${piece.category} portrait`}
+          width={THUMB_W}
+          height={Math.round(THUMB_W / piece.ratio)}
+          loading={size === "thumb" ? "lazy" : "eager"}
+          decoding="async"
+          className="h-full w-full object-cover"
+        />
+      </>
     );
   }
   return <Placeholder tint={piece.tint} />;

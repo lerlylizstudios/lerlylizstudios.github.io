@@ -17,7 +17,7 @@ export function Drawer({
   onClose: () => void;
   nav: (p: Page) => void;
 }) {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   useModal(open, ref, onClose);
 
   return (
@@ -29,7 +29,9 @@ export function Drawer({
           open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
-      <nav
+      {/* role="dialog" isn't allowed on <nav>, so the dialog is the wrapper
+          and the links sit in a real <nav> inside it. */}
+      <div
         ref={ref}
         role="dialog"
         aria-modal="true"
@@ -52,27 +54,29 @@ export function Drawer({
           </button>
         </div>
 
-        {NAV.map(({ label, page }) => {
-          const on = page === current;
-          return (
-            <button
-              key={page}
-              onClick={() => nav(page)}
-              aria-current={on ? "page" : undefined}
-              className="group flex items-center gap-3 border-b border-canvas-edge py-4 text-left font-display text-2xl text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink"
-            >
-              <span className={`h-5 w-5 shrink-0 transition-opacity ${on ? "opacity-100" : "opacity-0 group-hover:opacity-60"}`}>
-                <CommaDab color="var(--coral)" />
-              </span>
-              {on ? <span className="brush-underline">{label}</span> : label}
-            </button>
-          );
-        })}
+        <nav aria-label="Site" className="flex flex-col gap-1">
+          {NAV.map(({ label, page }) => {
+            const on = page === current;
+            return (
+              <button
+                key={page}
+                onClick={() => nav(page)}
+                aria-current={on ? "page" : undefined}
+                className="group flex items-center gap-3 border-b border-canvas-edge py-4 text-left font-display text-2xl text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink"
+              >
+                <span className={`h-5 w-5 shrink-0 transition-opacity ${on ? "opacity-100" : "opacity-0 group-hover:opacity-60"}`}>
+                  <CommaDab color="var(--coral)" />
+                </span>
+                {on ? <span className="brush-underline">{label}</span> : label}
+              </button>
+            );
+          })}
+        </nav>
 
         <a
           href={SITE.instagram}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-ink-soft hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
@@ -82,7 +86,7 @@ export function Drawer({
           </svg>
           Follow on Instagram
         </a>
-      </nav>
+      </div>
     </>
   );
 }

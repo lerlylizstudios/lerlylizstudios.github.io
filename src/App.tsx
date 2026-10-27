@@ -57,6 +57,14 @@ function Root() {
 }
 
 const PAGES: Page[] = ["home", "gallery", "order", "about", "faq"];
+// Each hash route gets its own <title> (index.html's is the Home one).
+const TITLES: Record<Page, string> = {
+  home: "Lerly Liz Studios — Acrylic Pet Portraits",
+  gallery: "Gallery — Lerly Liz Studios",
+  order: "Order a Portrait — Lerly Liz Studios",
+  about: "About the Artist — Lerly Liz Studios",
+  faq: "FAQ — Lerly Liz Studios",
+};
 const pageFromHash = (): Page => {
   const h = window.location.hash.replace(/^#/, "") as Page;
   return PAGES.includes(h) ? h : "home";
@@ -75,6 +83,10 @@ function SiteApp() {
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
+
+  useEffect(() => {
+    document.title = TITLES[page];
+  }, [page]);
 
   // Commissions state seeds from settings.json (owner-controlled in the admin)
   // and drives the badge + CTAs sitewide.

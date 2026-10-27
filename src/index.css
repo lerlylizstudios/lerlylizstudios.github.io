@@ -70,8 +70,8 @@
 }
 
 @layer utilities {
-  .text-balance { text-wrap: balance; }
-  .text-pretty { text-wrap: pretty; }
+  /* (text-balance / text-pretty come built into Tailwind 3.4 — not redefined
+     here, which the W3C CSS validator flagged as duplicate declarations.) */
 
   /* Painterly underline that sweeps under a heading. */
   .brush-underline {

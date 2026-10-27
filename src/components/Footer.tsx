@@ -21,7 +21,7 @@ export function Footer({ nav }: { nav: (p: Page) => void }) {
           <a
             href={SITE.instagram}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
@@ -29,7 +29,7 @@ export function Footer({ nav }: { nav: (p: Page) => void }) {
               <circle cx="12" cy="12" r="4" />
               <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
             </svg>
-            @lerly_lizstudio
+            {SITE.instagramHandle}
           </a>
           <span>© {new Date().getFullYear()} {SITE.brand}</span>
         </div>

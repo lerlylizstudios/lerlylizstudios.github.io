@@ -6,7 +6,7 @@
 // JSON), required alt text, real GitHub errors surfaced, confirm-before-delete,
 // and a warm, plain-language skin. Nothing here ever says commit/repo/sha to the
 // owner — it says "save", and "your site updates in about 2 minutes".
-import { useCallback, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useState, type ReactNode } from "react";
 
 // ── CONFIG ───────────────────────────────────────────────
 const REPO = "lerlylizstudios/lerlylizstudios.github.io";
@@ -269,6 +269,10 @@ export default function Admin() {
   const [faq, setFaq] = useState<FaqData>(EMPTY_FAQ);
   const [faqRaw, setFaqRaw] = useState("");
 
+  useEffect(() => {
+    document.title = "Edit your site — Lerly Liz Studios";
+  }, []);
+
   const [pending, setPending] = useState<PendingFile[]>([]);
   const [addedTitles, setAddedTitles] = useState<string[]>([]);
 
@@ -494,8 +498,9 @@ export default function Admin() {
           Paste your personal access key to edit your site. It stays on this
           device and is never saved anywhere.
         </p>
-        <label className="mt-8 block text-base font-semibold">Access key</label>
+        <label htmlFor="access-key" className="mt-8 block text-base font-semibold">Access key</label>
         <input
+          id="access-key"
           type="password"
           value={token}
           onChange={(e) => setToken(e.target.value)}
@@ -558,8 +563,9 @@ export default function Admin() {
             <h2 className="text-h3 font-display">Add a painting</h2>
             <div className="mt-4 flex flex-col gap-4">
               <div>
-                <label className="block text-base font-semibold">Photo of the painting</label>
+                <label htmlFor="new-photo" className="block text-base font-semibold">Photo of the painting</label>
                 <input
+                  id="new-photo"
                   key={fileKey}
                   type="file"
                   accept="image/*"
@@ -617,14 +623,18 @@ export default function Admin() {
                           <IconBtn onClick={() => removePiece(p.id)} label="Remove" danger>✕</IconBtn>
                         </div>
                       </div>
+                      <label htmlFor={`piece-${p.id}-title`} className="sr-only">Pet's name</label>
                       <input
+                        id={`piece-${p.id}-title`}
                         value={p.title}
                         onChange={(e) => updatePiece(p.id, "title", e.target.value)}
                         placeholder="Pet's name"
                         className={inputCls}
                       />
                       <div className="flex gap-2">
+                        <label htmlFor={`piece-${p.id}-category`} className="sr-only">Category</label>
                         <select
+                          id={`piece-${p.id}-category`}
                           value={p.category}
                           onChange={(e) => updatePiece(p.id, "category", e.target.value)}
                           className={inputCls}
@@ -643,7 +653,9 @@ export default function Admin() {
                           {featured ? "★ On Home" : "Show on Home"}
                         </button>
                       </div>
+                      <label htmlFor={`piece-${p.id}-alt`} className="sr-only">Describe the painting for screen readers</label>
                       <textarea
+                        id={`piece-${p.id}-alt`}
                         value={p.alt ?? ""}
                         onChange={(e) => updatePiece(p.id, "alt", e.target.value)}
                         rows={2}
@@ -706,8 +718,9 @@ export default function Admin() {
             <div className="mt-3 flex flex-col gap-4">
               {settings.howItWorks.map((s, i) => (
                 <div key={i} className="frame p-4">
-                  <span className="text-sm text-ink-faint">Step {i + 1}</span>
+                  <label htmlFor={`step-${i}-title`} className="text-sm text-ink-faint">Step {i + 1}</label>
                   <input
+                    id={`step-${i}-title`}
                     value={s.step}
                     onChange={(e) =>
                       setSettings((prev) => ({
@@ -718,7 +731,9 @@ export default function Admin() {
                     placeholder="Step title"
                     className={inputCls + " mt-1"}
                   />
+                  <label htmlFor={`step-${i}-detail`} className="sr-only">Step {i + 1} detail</label>
                   <textarea
+                    id={`step-${i}-detail`}
                     value={s.detail}
                     onChange={(e) =>
                       setSettings((prev) => ({
@@ -748,9 +763,10 @@ export default function Admin() {
               className={inputCls}
             />
           </Field>
-          <section className="frame p-5">
-            <label className="block text-base font-semibold">Your photo</label>
+          <div className="frame p-5">
+            <label htmlFor="about-photo" className="block text-base font-semibold">Your photo</label>
             <input
+              id="about-photo"
               type="file"
               accept="image/*"
               onChange={(e) => uploadAboutPhoto(e.target.files?.[0] ?? null)}
@@ -770,7 +786,7 @@ export default function Admin() {
                 </button>
               </div>
             )}
-          </section>
+          </div>
           <Field label="Materials line (under your photo)">
             <input
               value={about.materials}
@@ -794,13 +810,17 @@ export default function Admin() {
                   <IconBtn onClick={() => remFaq(i)} label="Remove" danger>✕</IconBtn>
                 </div>
               </div>
+              <label htmlFor={`faq-${i}-q`} className="sr-only">Question {i + 1}</label>
               <input
+                id={`faq-${i}-q`}
                 value={item.q}
                 onChange={(e) => updFaq(i, "q", e.target.value)}
                 placeholder="Question"
                 className={inputCls}
               />
+              <label htmlFor={`faq-${i}-a`} className="sr-only">Answer {i + 1}</label>
               <textarea
+                id={`faq-${i}-a`}
                 value={item.a}
                 onChange={(e) => updFaq(i, "a", e.target.value)}
                 rows={3}

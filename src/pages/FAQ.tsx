@@ -1,7 +1,8 @@
-// FAQ — real $35-buyer questions, owner-editable. Accessible accordion.
+// FAQ — real buyer questions, owner-editable. Accessible accordion.
 import { useState } from "react";
 import { useData, type FaqDoc } from "../lib/useData";
 import type { Page } from "../nav";
+import { SITE } from "../lib/site";
 
 const EMPTY: FaqDoc = { faqs: [] };
 
@@ -41,7 +42,7 @@ export function FAQ({ nav }: { nav: (p: Page) => void }) {
 
       <div className="mt-10 flex flex-wrap items-center gap-3">
         <p className="text-ink-soft">Ready when you are.</p>
-        <button className="btn-primary" onClick={() => nav("order")}>Order a portrait — $35</button>
+        <button className="btn-primary" onClick={() => nav("order")}>Order a portrait — from {SITE.price}</button>
       </div>
     </div>
   );

@@ -22,7 +22,17 @@ export function About() {
             style={{ boxShadow: "0 16px 30px -18px rgba(120,80,50,.45), inset 0 0 0 1px rgba(36,30,27,.16)" }}
           >
             {about.photo ? (
-              <img src={about.photo} alt="Lerly, the artist, in her studio" className="h-full w-full object-cover" />
+              <>
+                {/* Source: photo provided by Lerly Liz Studios */}
+                {/* Box is ≤320×400 (cover → draws 320×480), so the file is 640×960 (2×). */}
+                <img
+                  src={about.photo}
+                  alt="Portrait of Lerly, the artist behind Lerly Liz Studios"
+                  width={640}
+                  height={960}
+                  className="h-full w-full object-cover"
+                />
+              </>
             ) : (
               // Placeholder until the artist photo is added (owner-editable).
               <div className="absolute inset-0">

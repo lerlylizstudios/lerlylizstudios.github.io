@@ -1,4 +1,5 @@
-// The one commerce module for v1: "Order your pet's portrait — $35 on Etsy".
+// The one commerce module: "Order your pet's portrait — $45 on Etsy" (the
+// 8×10 listing; price lives in SITE.price).
 // Reused verbatim on Home and in the single Order view. The `open` toggle swaps
 // the CTA between ordering and the waitlist. A scribbled color field (chaos)
 // bleeds off one edge; the calm card (clarity) sits over it, paper-dominant.
@@ -34,15 +35,15 @@ export function OrderModule({ open = true }: { open?: boolean }) {
         </div>
         <div className="flex flex-wrap items-center gap-3">
           {open ? (
-            <a className="btn-primary" href={SITE.etsyListing} target="_blank" rel="noreferrer">
+            <a className="btn-primary" href={SITE.etsyListing} target="_blank" rel="noopener noreferrer">
               Order on Etsy — {SITE.price}
             </a>
           ) : (
-            <a className="btn-ink" href={SITE.instagram} target="_blank" rel="noreferrer">
+            <a className="btn-ink" href={SITE.instagram} target="_blank" rel="noopener noreferrer">
               Booked — join the waitlist
             </a>
           )}
-          <a className="btn-ghost" href={SITE.etsyShop} target="_blank" rel="noreferrer">
+          <a className="btn-ghost" href={SITE.etsyShop} target="_blank" rel="noopener noreferrer">
             Visit the Etsy shop
           </a>
         </div>
